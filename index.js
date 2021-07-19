@@ -1,13 +1,19 @@
 window.onload=function(){ 
 
     let screen = document.getElementById('screen');
+    let dateScreen = document.getElementById('dateScreen');
 
-    const displayDate = () => {
+    const displayTime = () => {
         let today = new Date();
         let hours = today.getHours();
         let minutes = today.getMinutes();
         let seconds = today.getSeconds();
         let time;
+        let day = today.getDate();
+        let month = today.getMonth() + 1;
+        let year = today.getFullYear();
+        let date = day + '/' + month + '/' + year; 
+        console.log(date);
 
         if(hours <= 9){
             time = '0' + hours + ':' + minutes + ':' + seconds;
@@ -22,6 +28,9 @@ window.onload=function(){
             time = hours + ':' + minutes + ':' + seconds;
         }
         screen.innerHTML = time;
+        dateScreen.innerHTML = date;
+
+
     }
-    setInterval(displayDate, 1000);
+    setInterval(displayTime, 950);
 }

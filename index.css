@@ -13,3 +13,8 @@ body{
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#dateScreen{
+    font-size: 40px;
+    font-family: monospace;
+}
